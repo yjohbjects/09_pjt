@@ -1,6 +1,6 @@
 <template>
   <div>
-
+    <h1>RandomView</h1>
   </div>
 </template>
 
