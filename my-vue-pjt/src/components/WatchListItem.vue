@@ -14,7 +14,8 @@ export default {
     updateMovie() {
       this.$store.commit('UPDATE_MOVIE', this.wishMovie)
     }
-  }
+  },
+  
 }
 </script>
 
