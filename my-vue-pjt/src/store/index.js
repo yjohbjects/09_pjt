@@ -5,7 +5,8 @@ Vue.use(Vuex)
 
 export default new Vuex.Store({
   state: {
-    watchList: []
+    watchList: [],
+    movies: [],
   },
   getters: {
   },
@@ -24,6 +25,9 @@ export default new Vuex.Store({
         } 
         return movie
       })
+    },
+    GET_MOVIE_DATA(state, movieData) {
+      state.movies = movieData
     }
   },
   actions: {
