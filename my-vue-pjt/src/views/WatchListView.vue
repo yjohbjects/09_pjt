@@ -4,7 +4,7 @@
     <WatchListForm
       @add-movie="addMovie"
     />
-    <ul>
+    <ul style="list-style-type: none">
       <WatchListItem
         v-for="(wishMovie, index) in watchList"
         :key="index"
