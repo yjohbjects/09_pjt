@@ -1,13 +1,39 @@
 <template>
 <div>
-  <button @click="getRandomMovie">RandomView</button>
-  <div v-if="gottenRandomMovie">
-    {{ gottenRandomMovie.title }}<br>
-    <img :src="`https://image.tmdb.org/t/p/original${gottenRandomMovie.poster_path}`" height="280" width="180">
-  </div>
-  <div v-else>
-    {{ randomMovie.title }}<br>
-    <img :src="`https://image.tmdb.org/t/p/original${randomMovie.poster_path}`" height="280" width="180">
+  <button @click="getRandomMovie" class="w-25">PICK</button>
+  <div class="d-flex justify-content-center">
+    <div class="card my-5 w-25">
+      <div v-if="gottenRandomMovie">
+        <img class="card-img-top" :src="`https://image.tmdb.org/t/p/original${gottenRandomMovie.poster_path}`"><br>
+        
+        <div class="mt-4">
+          <h3>{{ gottenRandomMovie.title }}</h3>
+        </div>
+        <br>
+
+        <div class="mx-3 my-3" v-if="gottenRandomMovie.overview">
+          {{ gottenRandomMovie.overview }}
+        </div>
+        <div v-else class="my-3">
+          <span>영화 정보가 아직 업데이트 되지 않았떠요</span>
+        </div>
+      </div>
+
+      <div v-else>
+        <img class="card-img-top" :src="`https://image.tmdb.org/t/p/original${randomMovie.poster_path}`"><br>
+        <div class="mt-4">
+          <h3>{{ randomMovie.title }}</h3>
+        </div><br>
+
+        <div class="mx-3 my-3" v-if="randomMovie.overview">
+          {{ randomMovie.overview }}
+        </div>
+        <div v-else class="my-3">
+          <span>영화 정보가 아직 업데이트 되지 않았떠요</span>
+        </div>
+      </div>
+
+    </div>
   </div>
 
 </div>

@@ -1,8 +1,11 @@
 <template>
-  <div id="app">
-    <router-link :to="{ name: 'movies' }">Movie</router-link> |
-    <router-link :to="{ name: 'random' }">Random</router-link> |
-    <router-link :to="{ name: 'watchList' }">WatchList</router-link>
+  <div id="app" class="">
+
+  <div style="text-align: right" class="mx-5 bg-light">
+    <router-link class="mx-2" style="text-decoration: none; color: inherit;" :to="{name: 'movies'}">Movies</router-link>
+    <router-link class="mx-2" style="text-decoration: none; color: inherit;" :to="{name: 'random'}">Random</router-link>
+    <router-link class="mx-2" style="text-decoration: none; color: inherit;" :to="{name: 'watchList'}">WatchList</router-link>
+  </div>
     <router-view/>
   </div>
 </template>
@@ -48,6 +51,7 @@ export default {
 
 </script>
 <style>
+
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -56,9 +60,9 @@ export default {
   color: #2c3e50;
 }
 
-nav {
+/* nav {
   padding: 30px;
-}
+} */
 
 nav a {
   font-weight: bold;
@@ -68,4 +72,16 @@ nav a {
 nav a.router-link-exact-active {
   color: #42b983;
 }
+
+section,
+header {
+  /* 전체 너비의 80% */
+  width: 80%;      
+  /* 양 옆 margin을 균등하게 배분 */
+  margin: 0 auto;   
+  /* 위, 아래 padding */
+  padding: 1rem 0;  
+}
+
+
 </style>

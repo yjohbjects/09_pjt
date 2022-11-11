@@ -1,11 +1,16 @@
 <template>
-  <div>
+  <div class="mx-5">
     <h1>MovieView</h1>
-    <MovieCard 
-    v-for="(movie, id) in movies"
-    :key="id"
-    :movie="movie"
-    />
+    
+    <div class="d-flex justify-content-center flex-wrap ">
+      <!-- <div class="row row-cols-1 row-cols-md-3 g-4"> -->
+        <MovieCard 
+        v-for="(movie, id) in movies"
+        :key="id"
+        :movie="movie"
+        />
+      <!-- </div>   -->
+    </div>
   </div>
 </template>
 

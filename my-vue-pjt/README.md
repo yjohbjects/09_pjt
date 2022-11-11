@@ -1,24 +1,41 @@
-# my-vue-pjt
+# 09_pjt README
 
-## Project setup
-```
-npm install
-```
+## 1. 서론
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
+오늘의 관통 프로젝트는 영화 정보를 api 서버를 통해서 받아와서 영화 페이지를 만든다.
 
-### Compiles and minifies for production
-```
-npm run build
-```
+- Movie: 평점 상위 영화 20편을 받아오는 페이지
+- Random: Movie의 영화 20편 중 랜덤 영화 1편을 받아오는 페이지
+- WatchList: 볼 예정인 영화의 리스트를 추가하고, 그 중 본 영화는 취소선을 적용하는 todo list와 같이 동작하는 페이지
 
-### Lints and fixes files
-```
-npm run lint
-```
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+
+# 2. 아쉬운 점
+
+- 새로고침시 발생하는 에러(no setter)를 완벽하게 해결하지 못했다.
+
+  최종 프로젝트 진행 시 다시 직면할 문제이기 때문에 computed 내 get, set을 공부해야겠다.
+
+- css, bootstrap을 원하는대로 구현하지 못했고, 지저분하게.. 적용한 부분에 있어서 아쉬움이 남았다.
+
+  bootstrap을 알고 사용했다기보다, 원하는 모양이 나올 때까지 시도한 부분에 대해서 스스로의 미숙함이 느껴졌다.
+
+- vue router와 vuex의 용도를 적절히 익혀 사용할 타이밍에 대해서 익혀두어야겠다.
+
+- 데이터를 불러오는 시점을 잘 지정하고 불러와야한다.
+
+  movieView.vue에 처음 불러왔다가, randomMovie에도 필요하다는 것을 뒤늦게 깨닫고 store/index.js로 옮기는 과정이 수고로웠다.
+
+- 시간이 부족했다..
+
+
+
+# 3.  배운 점
+
+- 별도의 가이드 없이 api key를 활용하여 영화 정보를 불러왔다.
+
+  youtube 데이터를 받아오는 실습을 하고, TMDB 데이터를 받아오는 실습을 통해서 developers 공식 페이지를 읽는 방법을 터득했다.
+
+- 팀워크가 죽여준다.
+
+  
