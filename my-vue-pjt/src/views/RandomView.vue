@@ -1,9 +1,16 @@
 <template>
-  <div v-if="randomMovie">
-    <h1 @click="getRandomMovie">RandomView</h1>
+<div>
+  <button @click="getRandomMovie">RandomView</button>
+  <div v-if="gottenRandomMovie">
+    {{ gottenRandomMovie.title }}<br>
+    <img :src="`https://image.tmdb.org/t/p/original${gottenRandomMovie.poster_path}`" height="280" width="180">
+  </div>
+  <div v-else>
     {{ randomMovie.title }}<br>
     <img :src="`https://image.tmdb.org/t/p/original${randomMovie.poster_path}`" height="280" width="180">
   </div>
+
+</div>
 </template>
 
 <script>
@@ -15,6 +22,7 @@ export default {
   data() {
     return  {
       default_path: 'https://image.tmdb.org/t/p/original',
+      gottenRandomMovie: null
     }
   },
   computed: {
@@ -24,12 +32,9 @@ export default {
   },
   methods: {
     getRandomMovie() {
-      this.randomMovie = _.sample(this.movies)
+      this.gottenRandomMovie = _.sample(this.$store.state.movies)
     },
   },
-  // created() {
-  //     this.getRandomMovie()
-  //   },
 }
 </script>
 
