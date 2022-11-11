@@ -1,6 +1,6 @@
 <template>
   <div>
-
+    <h3>WatchListItem</h3>
   </div>
 </template>
 
